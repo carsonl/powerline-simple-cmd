@@ -5,7 +5,7 @@ import string
 import subprocess
 
 
-def cmd(pl, segment_info):
+def cmd(pl, cmd):
     """Returns a unicode sock, and either an up or down arrow
     """
     output = subprocess.run(cmd,stdout=subprocess.PIPE).output
