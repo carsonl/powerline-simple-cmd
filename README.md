@@ -18,7 +18,7 @@ Add to your tmux (or shell, I guess) theme a new section containing:
     "function": "powerline-simple-cmd.segments.simple-cmd.cmd",
     "args": [
 	"cmd": "your_cmd_here"
-    ]
+    ],
     "priority": 50
 }
  ```

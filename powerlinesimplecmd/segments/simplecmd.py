@@ -5,8 +5,8 @@ import string
 import subprocess
 
 
-def cmd(pl, cmd):
+def cmd(pl, command):
     """Returns a unicode sock, and either an up or down arrow
     """
-    output = subprocess.run(cmd,stdout=subprocess.PIPE).output
-    return output.decode('utf-8').strip('\n')
+    result = subprocess.run(command,stdout=subprocess.PIPE)
+    return result.stdout.decode('utf-8').strip('\n')
