@@ -7,10 +7,14 @@ import powerline.lib.shell
 
 
 def cmd(pl=None, command="/bin/echo None"):
-    """Returns a unicode sock, and either an up or down arrow
+    """Returns a the output of a command, or nothing if the output is also nothing
     """
     result = subprocess.getoutput(command)
-    return [{"contents":result.strip('\n'),"highlight_groups":["window"]}]
+    stripped_result = result.strip('\n')
+    if len(stripped_result) == 0:
+        return None
+    else:
+        return [{"contents":stripped_result,"highlight_groups":["window"]}]
 
 if __name__ == '__main__':
     print(cmd(command="/bin/echo test"))
